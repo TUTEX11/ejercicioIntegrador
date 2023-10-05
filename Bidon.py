@@ -10,7 +10,7 @@ class Bidon(Carga):
     def __str__(self):
         return f'{super().__str__()}, BIDON Capacidad: {self.capacidad}, densidad: {self.densidad}'
 
-    def peso(self):
+    def getPeso(self):
         return self.capacidad * self.densidad
 
     def getCapacidad(self):

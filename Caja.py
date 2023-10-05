@@ -9,10 +9,5 @@ class Caja(Carga):
     def __str__(self):
         return f'{super().__str__()}, CAJA peso: {self.peso}'
 
-    @property
-    def peso(self):
+    def getPeso(self):
         return self.peso
-
-    @peso.setter
-    def peso(self, value):
-        self.peso = value

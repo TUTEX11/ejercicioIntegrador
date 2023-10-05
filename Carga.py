@@ -15,5 +15,5 @@ class Carga(ABC):
         self.contenido = con
 
     @abstractmethod
-    def peso(self):
+    def getPeso(self):
         pass

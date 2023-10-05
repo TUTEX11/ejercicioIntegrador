@@ -15,7 +15,7 @@ def leer_archivos():
         for data in data_cajas:
             datos = data.strip('\n').split(',')
             contenido = datos[0]
-            peso = float(datos[1])
+            peso = int(datos[1])
             caja = Caja(contenido, peso)
             cajas.append(caja)
 
@@ -38,7 +38,7 @@ def leer_archivos():
             datos = data.strip('\n').split(',')
             contenido = datos[0]
             cap = int(datos[1])
-            dens = int(datos[2])
+            dens = float(datos[2])
             bidon = Bidon(contenido, cap, dens)
             bidones.append(bidon)
 

@@ -30,5 +30,5 @@ class Packing(Carga):
     def setPesoEstructura(self, val):
         self.peso_estructura = val
 
-    def peso(self):
+    def getPeso(self):
         return self.peso_estructura + (self.pesoPorCaja * self.cantidad)

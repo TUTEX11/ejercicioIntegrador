@@ -6,7 +6,7 @@ class Camion:
         self.patente = pat
         self.estado = est
         self.cargaMaxima = cMax
-        self.cargas = None
+        self.cargas = []
 
     def __str__(self):
         aux = ''
@@ -21,10 +21,10 @@ class Camion:
         return False
 
     def pesoCargas(self):
-        return sum(carga.peso() for carga in self.cargas)
+        return sum(carga.getPeso() for carga in self.cargas)
 
     def subirCarga(self, carga: Carga):
-        if (self.pesoCargas() + carga.peso()) < self.cargaMaxima:
+        if (self.pesoCargas() + carga.getPeso()) < self.cargaMaxima:
             self.cargas.append(carga)
             return True
         return False
@@ -53,7 +53,7 @@ class Camion:
         return False
 
     def cargasEnOrden(self):
-        cargasOrdenadas = sorted(self.cargas, key=lambda carga1: carga1.peso())
+        cargasOrdenadas = sorted(self.cargas, key=lambda carga1: carga1.getPeso())
         aux = ''
         for carga in cargasOrdenadas:
             aux += f'{str(carga)}\n'
