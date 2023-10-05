@@ -2,7 +2,7 @@ from Carga import Carga
 
 
 class Caja(Carga):
-    def __int__(self, cont: str, pes: float):
+    def __init__(self, cont, pes):
         super().__init__(cont)
         self.peso = pes
 

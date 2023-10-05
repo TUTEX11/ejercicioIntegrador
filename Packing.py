@@ -2,7 +2,7 @@ from Carga import Carga
 
 
 class Packing(Carga):
-    def __int__(self, cont, peXca, cant, pe_es):
+    def __init__(self, cont, peXca, cant, pe_es):
         super().__init__(cont)
         self.pesoPorCaja = peXca
         self.cantidad = cant
